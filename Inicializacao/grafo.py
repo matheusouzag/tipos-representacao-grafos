@@ -77,6 +77,30 @@ def insereVertice(matriz):
 
     return matriz2
 
+def removeAresta(matriz, vi, vj):
+    tipo = '0'
+    qtd = np.shape(matriz)[0]
+
+    # Verificando se é um grafo simples ou direcionado
+    for i in range(0, qtd):
+        for j in range(i + 1, qtd):
+            if matriz[i][j] != matriz[j][i]:
+                tipo = '1'
+                break
+
+    # Inserindo a aresta na matriz de adjacência
+    if tipo == '0':
+        matriz[vi][vj] = matriz[vi][vj]-1
+        matriz[vj][vi] = matriz[vj][vi]-1
+    else:
+        matriz[vi][vj] = matriz[vi][vj]-1
+
+    return matriz
+
+
+
+
+
 
 
 
