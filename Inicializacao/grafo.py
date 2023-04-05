@@ -69,6 +69,16 @@ def insereAresta(matriz, vi, vj):
 
     return matriz
 
+def insereVertice(matriz):
+
+    qtd = np.shape(matriz)[0]
+    matriz2 = np.zeros((qtd + 1, qtd + 1), dtype=int) # np.zeros é usado para preencher com zeros as linhas e colunas
+    matriz2[:qtd, :qtd] = matriz # Aqui eu copio a antiga matriz nesta nova
+
+    return matriz2
+
+
+
 
 
 

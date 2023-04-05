@@ -14,6 +14,7 @@ def main(instancia):
     tipo = g.tipoGrafo(instanciaEscolhida)
     densidade = g.calcDensidade(instanciaEscolhida)
     insere = g.insereAresta(instanciaEscolhida, vi, vj)
+    insereV = g.insereVertice(instanciaEscolhida)
 
     # Prints dos resultados obtidos, testando todas as funções para entrega separada
     print(str(instancia))
@@ -22,6 +23,7 @@ def main(instancia):
     print(tipo)
     print(densidade)
     print(insere)
+    print(insereV)
 
 
     # Para salvar em arquivo
