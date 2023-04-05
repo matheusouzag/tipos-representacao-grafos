@@ -97,8 +97,17 @@ def removeAresta(matriz, vi, vj):
 
     return matriz
 
+def removeVertice(matriz, vi):
+    qtd = np.shape(matriz)[0]
+
+    matriz2 = np.array(matriz)
+
+    for i in range(qtd):
+        matriz2[vi][i] = -1
+        matriz2[i][vi] = -1
 
 
+    return matriz2
 
 
 
