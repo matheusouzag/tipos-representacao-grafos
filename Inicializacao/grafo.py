@@ -17,3 +17,33 @@ def verificaAdjacencia(matriz, vi, vj):
     else:
         return True
 
+def tipoGrafo(matriz):
+    tipo = '0'
+    tipo2 = '0'
+    qtd = np.shape(matriz)[0]
+
+    if np.sum(np.diagonal(matriz)) > 0:
+        tipo2 = '3'
+    else:
+        for i in range(0, qtd):
+            for j in range(0, qtd):
+                if matriz[i][j] > 1:
+                    tipo2 = '2'
+                    break
+
+    for vi in range(0, qtd):
+        for vj in range(vi + 1, qtd):
+            if matriz[vi][vj] == matriz[vj][vi]:
+                tipo = '0'
+            else:
+                tipo = '1'
+
+    res = (int(tipo2 + tipo))
+    return res;
+
+
+
+
+
+
+

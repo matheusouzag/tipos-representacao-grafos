@@ -11,11 +11,13 @@ def main(instancia):
     print(adjacencia)
     # matriz retorna o valor da quantidade de linhas e colunas da matriz instanciaEscolhida
     matriz = ds.qtdShape(instanciaEscolhida)
+    tipo = g.tipoGrafo(instanciaEscolhida)
 
     # Prints dos resultados obtidos
     print(str(instancia))
     print(matriz)
     print(instanciaEscolhida)
+    print(tipo)
 
     # Para salvar em arquivo
     resultado = [str(instancia), matriz, instanciaEscolhida] # Lista de tipo misto com valores dos resultados
